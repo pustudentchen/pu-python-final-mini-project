@@ -1,0 +1,10 @@
+資料集位置:https://universe.roboflow.com/alex-hyams-cosqx/dollar-bill-detection
+新建一個datasets將資料集的test train valid放入
+根據自身電腦安裝對應pytorch
+pip install ultralytics
+安裝後執行下行程式
+yolo predict model=yolov8n.pt source="https://ultralytics.com/images/bus.jpg"
+如果可執行代表安裝成功
+
+將其他github檔案放入同一個python專案資料夾並執行以下程式即可訓練模型
+yolo task=detect mode=train model=yolov8s.pt data=./data.yaml epochs=5 imgsz=640
